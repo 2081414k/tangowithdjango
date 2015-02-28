@@ -1,14 +1,10 @@
+{% extends 'base.html' %}
 
+{% load staticfiles %}
 
-<!DOCTYPE html>
+{% block title %}{{ category_name }}{% endblock %}
 
-
-{% load static %}
-
-
-<html>
-
-
+{% block body_block %}
     <head>
 
         <title>About</title>
@@ -21,12 +17,11 @@
 
 
     <body>
-
-        <h1>Foivos Karounos</h1>
-
+      {% if visits %}
+        <h1>number of visits: {{ visits }}</h1>
+      {% endif %}
         <img src="{% static "images/das.jpg" %}" alt=“this “thing” /> <!-- Images -->
 
     </body>
 
-
-</html>
+{% endblock %}

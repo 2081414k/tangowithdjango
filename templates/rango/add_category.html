@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ category_name }}{% endblock %}
+
+{% block body_block %}
     <head>
         <title>Rango</title>
     </head>
@@ -24,4 +29,4 @@
         </form>
     </body>
 
-</html>
+{% endblock %}
